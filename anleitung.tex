@@ -1,0 +1,107 @@
+% Created 2018-04-09 Mon 16:25
+% Intended LaTeX compiler: pdflatex
+\documentclass[oneside,bibliography=totoc,listof=totoc,BCOR=5mm,DIV=12,colorlinks=true,linkcolor=blue,citecolor=black, urlcolor=blue]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc} % Umlaute im Text
+\usepackage[german, english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{scrpage2}
+\usepackage[super, comma, numbers, square, sort]{natbib}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{amsmath, amsthm}
+\usepackage{upgreek}
+\usepackage{here}
+\usepackage{setspace}
+\usepackage{color}
+%\usepackage[automake]{glossaries-extra}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{soul}
+\usepackage{amssymb}
+\usepackage{booktabs}
+\usepackage{rotating}
+\usepackage[font=small]{caption}
+\usepackage{acronym}
+\usepackage{textgreek}
+\usepackage{verbatim}
+\usepackage{listings}
+\onehalfspacing
+\lstloadlanguages{bash}
+\lstset{basicstyle=\small,keywordstyle=\color{black}\bfseries,commentstyle=\color{blue}, stringstyle=\ttfamily, showstringspaces=false}
+%\input{gloss.tex}
+%\makeglossaries
+\author{Laura Endter}
+\date{\today}
+\title{Very, very brief introduction to Jupyter-Notebooks}
+\hypersetup{
+ pdfauthor={Laura Endter},
+ pdftitle={Very, very brief introduction to Jupyter-Notebooks},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 25.3.1 (Org mode 9.0.8)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+
+
+\section{Einleitung}
+\label{sec:org1dfb6c6}
+Vorlesungsbegleitend werden wir euch im Verlauf dieses Semesters sogenannte Jupyter-Notebooks zur Verfügung stellen, die euch helfen sollen den Vorlesungsstoff zu vertiefen und nebenbei eure Computerkenntnisse zu erweitern.
+
+
+\section{Was sind Jupyter-Notebooks}
+\label{sec:orgd657ea3}
+\emph{Jupyter Notebooks} sind Documente, die sowohl Code (in unserem Fall \emph{python3}) als auch Textelemente (zB. Latex) enthalten können. Sie sind \emph{human-readable} und ermöglichen es den enthaltenen Code direkt im Browser auszuführen und so Berechnungen auszuführen, Daten zu analysieren und zu plotten.
+
+\noindent Die Notebooks können mit Hilfe der Jupyter Notebook App geladen werden, welche entweder am localen PC oder auch durch Zugriff über den Webbrowser auf einen remote server ausgeführt werden kann.\\
+\noindent Ersteres erfordert eine lokale Installation swohl von Python als auch Jupyter. Mithilfe einschlägiger Paketmanager ist das meist porblemlos zu bewerkstelligen (\href{http://jupyter.org/install.html}{Anleitung}).
+\\
+\noindent Der Zugriff über einen remote server (siehe Abschnitt \ref{sec:org10423f3}) stellt eine komfortable Alternative dar, da keinerlei Software auf dem eigenen PC installiert werden muss, setzt allerdings eine Internetverbindgung vorraus.
+\\
+\noindent Beim öffnen eines Notebooks wird automatisch ein sogenannter \emph{kernel} gestartet, der dafür zuständig ist den Code auszuführen. So führt der \emph{iphython kernel} python code aus.
+\noindent Öffnet man die  Jupyter Notebook App gelangt man zum \emph{Dashboard} was euch eine übersicht über die vorhandenen Notebooks gibt, die in jenem Verzeichnis zu finden sind, von dem die App gestartet wurde. Von dort ist es möglich die laufenden \emph{kernels} zu verwalten, Dokumente zu öffnen, umzubenennen oder zu löschen.
+\\
+\noindent Die Nutzung und Erstellung der Notebooks ist sehr intuitiv und ihr werdet euch nach den ersten Beispielen schnell zurecht finden.
+\href{https://hub.mybinder.org/user/ipython-ipython-in-depth-heujngzw/notebooks/binder/Index.ipynb}{Hier} findet ihr eine ausführliche Einführung (natürlich in Form eines Notebooks ;)). Außerdem könnt ihr euch unter \textbf{Help} \(\rightarrow\) \textbf{User Interface Tour} eine interaktive Tour geben lassen.
+
+\noindent Um den Inhalt (zB. python code) einer Zelle vom Kernel ausführen zu lassen muss man lediglich die Zelle Anwählen und entweder über \textbf{Shift-Enter}, den \textbf{Run}-button oder das Menü \textbf{Cell} \(\rightarrow\) \textbf{Run} starten. Etwaiger Output (zB. Ergebnisse, Plots) oder Fehlermedlungen werden direkt unter der Zelle erscheinen.
+
+
+
+\section{Zugang über Webbrowser}
+\label{sec:org10423f3}
+
+\subsection{Binder}
+\label{sec:orgce45b28}
+\noindent Das opensource Project \href{https://mybinder.org}{Binder} bietet die Möglichkeit Notebooks aus einem bestehenden Verzeichnis bei \emph{Github} zu öffnen und so die erstellten Notebooks auf einfache Art für andere bereit zu stellen.
+\\
+\noindent Unter dem Link
+\begin{center}\url{https://mybinder.org/v2/gh/steffenschumann/AMjupyter.git/master}\end{center} gelangt ihr direkt zum Dashboard der Vorlesungsnotebooks.
+Von hier könnt ihr ein Notebook öffnen und nach Belieben modifizieren. 
+Eure Änderungen haben keinen Einfluss auf das ursprüngliche Dokument und gehen verloren, sofern ihr nicht vor beenden der Sitzung die entsprechende Datei herunterladet (unter File \(\rightarrow\) Download as \(\rightarrow\) Notebook).
+
+
+\subsection{GWDG}
+\label{sec:org83601c7}
+
+Die \textbf{GWDG} bietet (zur Zeit als Testphase) die Möglichkeit Jupyter-Hub zu nutzen. Hier könnt ihr euch mit eurem studIP Account anmelden und eure Notebooks hochladen, bearbeiten und verwalten.
+\noindent Wir empfehlen euch genau dies mit den Vorlesungs Notebooks zu tun. Notebooks die ihr hier gepeichert habt bleiben auch nach beenden bestehen. Allerdings ist anzumerken, dass es sich momentan lediglich um eine Testphase handelt, die bis Ende des Jahres 2018 dauert. Ob der Service danach weiterhin angeboten wird ist noch nicht sicher.\\
+\noindent Den Zugang zum Jupyter-Hub findet ihr unter \url{https://jupyter.gwdg.de}. 
+\end{document}
